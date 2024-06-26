@@ -1,6 +1,7 @@
 // src/components/NavBar.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './CartWidget'; // Importe o CartWidget
 
 const NavBar = () => {
   return (
@@ -10,7 +11,7 @@ const NavBar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <a className="nav-link" href="#">Categoria 1</a>
           </li>
@@ -21,6 +22,7 @@ const NavBar = () => {
             <a className="nav-link" href="#">Categoria 3</a>
           </li>
         </ul>
+        <CartWidget /> {/* Inclua o CartWidget */}
       </div>
     </nav>
   );
