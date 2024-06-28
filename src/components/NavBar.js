@@ -6,20 +6,20 @@ import CartWidget from './CartWidget'; // Importe o CartWidget
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">Nome da Loja</a>
+      <span className="navbar-brand">Nome da Loja</span>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoria 1</a>
+            <button className="nav-link btn btn-link">Categoria 1</button>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoria 2</a>
+            <button className="nav-link btn btn-link">Categoria 2</button>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoria 3</a>
+            <button className="nav-link btn btn-link">Categoria 3</button>
           </li>
         </ul>
         <CartWidget /> {/* Inclua o CartWidget */}
