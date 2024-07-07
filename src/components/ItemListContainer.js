@@ -20,17 +20,19 @@ const mockData = [
   // Adicione mais itens conforme necessário
 ];
 
+const getItems = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(mockData);
+    }, 2000);
+  });
+};
+
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const fetchItems = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(mockData);
-      }, 2000);
-    });
-
-    fetchItems.then((data) => {
+    getItems().then((data) => {
       setItems(data);
     });
   }, []);
