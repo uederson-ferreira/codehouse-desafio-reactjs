@@ -25,7 +25,6 @@ function ItemCount({ stock, initial, onAdd }) {
 
   return (
     <div className="item-count">
-      <p>Camisa tiger</p>
       <div className="count-controls d-flex align-items-center mb-2">
         <button className="btn btn-outline-primary" onClick={handleDecrement} disabled={count <= 1}>-</button>
         <span className="mx-3">{count}</span>
