@@ -1,14 +1,17 @@
 // src/components/ItemDetail.js
 import React, { useState } from 'react';
-import ItemCount from './ItemCount'; // Importe o ItemCount
+import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
-import './ItemDetail.css'; // Adicione um arquivo CSS para estilização personalizada
+import { useCart } from '../contexts/CartContext';
+// import './ItemDetail.css'; // Remova ou comente esta linha se não tiver o CSS
 
 function ItemDetail({ item }) {
   const [quantityToAdd, setQuantityToAdd] = useState(0);
+  const { addItem } = useCart();
 
   const onAdd = (quantity) => {
     setQuantityToAdd(quantity);
+    addItem(item, quantity);
   };
 
   return (
